@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "545249675453",
+    "firebase_url": "https://qfome-e2296.firebaseio.com",
+    "project_id": "qfome-e2296",
+    "storage_bucket": "qfome-e2296.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545249675453:android:d9577aee4c8b1e34aacfd4",
+        "android_client_info": {
+          "package_name": "com.example.exercicio05"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545249675453-58rh0olifvrv2it2uti5m0nopa30j867.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn3wg6aqpgCsakovh6OH4QMGXhtZeeAtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545249675453-58rh0olifvrv2it2uti5m0nopa30j867.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
  //import 'package:intl/intl.dart';
@@ -61,10 +62,16 @@ class _ProdutoState extends State<Produto> {
                   children: <Widget>[
                     //expanded pode ser usado para evitar que a imagem estoure para fora da tela, é bastante usado quando tem bastante conteudos que podem bugar a tela
                     //expanded tem que ser usado em textos para evitar que ele estoure para fora
-                    Image.network(
-                      '${dados['produtos'][index]['imagem_item']}',
+                    SizedBox(
                       width: 200.0,
-                    ),
+                      height: 130.0,
+                      child:
+                    CachedNetworkImage(
+                        imageUrl: "${dados['produtos'][index]['imagem_item']}",
+                        placeholder: (context, url) => new CircularProgressIndicator(),
+                        errorWidget: (context, url, error) => new Icon(Icons.error),
+                        
+                    ),),
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
@@ -91,6 +98,7 @@ class _ProdutoState extends State<Produto> {
                         ),
                       ),
                     ),
+                   
                   ],
                 ),
               ),
