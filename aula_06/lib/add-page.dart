@@ -1,22 +1,24 @@
+import 'dart:io';
+import 'package:image/image.dart' as img;
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:image_picker/image_picker.dart';
 
 class AddData extends StatefulWidget {
   @override
   _AddDataState createState() => _AddDataState();
 }
-  TextEditingController nomeController = TextEditingController();
-    TextEditingController precoController = TextEditingController();
-    TextEditingController descricaoController = TextEditingController();
-    TextEditingController pontuacaoController = TextEditingController();
 
+TextEditingController nomeController = TextEditingController();
+TextEditingController precoController = TextEditingController();
+TextEditingController descricaoController = TextEditingController();
+TextEditingController pontuacaoController = TextEditingController();
+
+File imgFile;
 
 class _AddDataState extends State<AddData> {
   @override
   Widget build(BuildContext context) {
-   
-  
-
     Future adicionar() async {
       var url = "https://patopapao.000webhostapp.com/add-produto.php";
       http.Response response = await http.post(url, body: {
@@ -25,6 +27,15 @@ class _AddDataState extends State<AddData> {
         "descricaoProduto": descricaoController.text,
         "pontuacaoProduto": pontuacaoController.text
       });
+    }
+
+    Future getImageCamera() async {
+      imgFile = await ImagePicker.pickImage(source: ImageSource.camera);
+      if (imgFile == null) {
+        return;
+      }
+      print(imgFile.uri);
+      img.Image image = img.decodeImage(imgFile.readAsBytesSync());
     }
 
     return Scaffold(
@@ -37,7 +48,7 @@ class _AddDataState extends State<AddData> {
           child: Container(
             child: Column(
               children: <Widget>[
-                 TextField(
+                TextField(
                   keyboardType: TextInputType.number,
                   controller: nomeController,
                   decoration: InputDecoration(
@@ -90,13 +101,13 @@ class _AddDataState extends State<AddData> {
                   height: 20.0,
                 ),
 
-                // RaisedButton(
-                //   onPressed: () {},
-                //   child: Text('    imagem   '),
-                //   shape: RoundedRectangleBorder(
-                //     borderRadius: BorderRadius.circular(10),
-                //   ),
-                // ),
+                RaisedButton(
+                  onPressed: getImageCamera,
+                  child: Text('    tirar   '),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
                 RaisedButton(
                   onPressed: () {
                     adicionar();

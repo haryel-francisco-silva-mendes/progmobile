@@ -26,6 +26,9 @@ dependencies:
   toast: ^0.1.5
   intl: ">=0.14.0"
   http: ^0.12.0+2
+  image: ^2.1.4
+  image_picker: ^0.6.1+4
+  cached_network_image: ^1.0.0
   
 dev_dependencies:
   flutter_test:
