@@ -82,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child:Column(//parei aqui OÒÒÒÒÒÒÒÒÒÒÒÒÒo),
         ),
       ),
-    );
+    ));
 
   }
 }

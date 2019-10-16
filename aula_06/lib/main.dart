@@ -1,4 +1,5 @@
 
+import 'package:aula_06/adm-page.dart';
 import 'package:aula_06/jsom_produto.dart';
 import 'package:flutter/material.dart';
 // import 'dart:convert';
@@ -12,7 +13,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     //depois voltar para o home
    // home: HomePage(),
-   home: Produto(),
+   home: Painel(),
   ));
 }
 
