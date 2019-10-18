@@ -15,7 +15,7 @@ class _ProdutoState extends State<Produto> {
   
   Future<String> getData() async{
     var response = await http.get(
-      Uri.encodeFull("https://patopapao.000webhostapp.com/lista_de_item.php"),
+      Uri.encodeFull("http://haryel.tecnicosenac.tk/lista_de_item.php"),
       headers:{'Accept':'Application/json'},
     );
     //setstate atualiza a tela
