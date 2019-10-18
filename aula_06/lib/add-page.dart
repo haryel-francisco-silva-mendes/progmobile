@@ -84,7 +84,7 @@ class _AddDataState extends State<AddData> {
             child: Column(
               children: <Widget>[
                 TextField(
-                  keyboardType: TextInputType.number,
+                  keyboardType: TextInputType.text,
                   controller: nomeController,
                   decoration: InputDecoration(
                     labelText: "nome do item",
