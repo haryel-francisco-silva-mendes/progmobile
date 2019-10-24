@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "863569313961",
+    "firebase_url": "https://receitas-a8259.firebaseio.com",
+    "project_id": "receitas-a8259",
+    "storage_bucket": "receitas-a8259.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863569313961:android:13ac681eb244ceb057a9b8",
+        "android_client_info": {
+          "package_name": "com.example.aula_firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863569313961-3bpfk40q44uo28b9me65l6bunusc9sv2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aula_firebase",
+            "certificate_hash": "13f6f7d7b6ff5b6943b5e9c35c10e75e4749c59c"
+          }
+        },
+        {
+          "client_id": "863569313961-d7575gkc9n6lg9tk0kcmigb4dvq5ifa0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfHCfhUydTRdNzZEo3iaBsztu7Pcv4XO0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863569313961-d7575gkc9n6lg9tk0kcmigb4dvq5ifa0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
